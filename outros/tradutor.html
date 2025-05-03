@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tradutor Secreto</title>
+    <style>
+        body {
+            background-color: #f4e6c1;
+            font-family: 'Georgia', serif;
+            color: #3e2a47;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .title {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: #3c2f2f;
+            font-weight: bold;
+        }
+
+        .container {
+            background-color: #fff8e1;
+            border: 1px solid #3e2a47;
+            padding: 20px;
+            display: inline-block;
+            border-radius: 5px;
+        }
+
+        .input-box {
+            width: 80%;
+            padding: 10px;
+            font-size: 18px;
+            margin-bottom: 20px;
+            border: 1px solid #3e2a47;
+            background-color: #fdf9f2;
+            color: #3e2a47;
+        }
+
+        .keypad {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 10px;
+            max-width: 360px;
+            margin: 0 auto;
+        }
+
+        .key {
+            padding: 10px;
+            background-color: #3e2a47;
+            color: #fdf9f2;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .key:hover {
+            background-color: #8b5f53;
+        }
+
+        .output-box {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #3e2a47;
+            background-color: #fff8e1;
+            padding: 10px;
+            border: 1px solid #3e2a47;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">Tradutor Secreto</div>
+    <div class="container">
+        <input class="input-box" type="text" id="inputText" placeholder="Digite a frase codificada..." disabled>
+        <div class="keypad" id="keypad"></div>
+        <button onclick="unlock()" style="margin-top: 20px; padding: 10px 20px; background-color: #8b5f53; color: white; border: none; font-size: 18px; border-radius: 5px;">Desbloquear</button>
+        <div class="output-box" id="outputText"></div>
+    </div>
+
+    <script>
+        let locked = true;
+
+        // Alfabeto embaralhado com símbolos únicos e novos significados
+        const secretAlphabet = {
+            'Λ': 'L', 'ω': 'M', 'Ϭ': 'N', '↳': 'O', '¥': 'Q', 'Ͼ': 'P', 'ζ': 'H', '†': 'S',
+            'ß': 'B', '♧': 'U', 'Σ': 'V', 'ℚ': 'W', 'я': 'X', 'Π': 'Y', 'Ш': 'Z', 'ↄ': 'A',
+            '√': 'B', 'υ': 'T', 'Ɛ': 'D', 'ђ': 'E', 'и': 'K', '×': 'G', 'Ϟ': 'R', 'Ӄ': 'I',
+            '♤': 'J', '⚘': 'F'
+        };
+
+        function addChar(char) {
+            if (!locked) {
+                document.getElementById("inputText").value += char;
+                translate();
+            }
+        }
+
+        function unlock() {
+            locked = false;
+            document.getElementById("inputText").disabled = false;
+            document.getElementById("outputText").textContent = "Pronto! Agora você pode escrever.";
+        }
+
+        function translate() {
+            let inputText = document.getElementById("inputText").value;
+            let translatedText = inputText.split('').map(function(letter) {
+                return secretAlphabet[letter] || letter;
+            }).join('');
+            document.getElementById("outputText").textContent = translatedText;
+        }
+
+        // Cria o teclado com letras embaralhadas
+        window.onload = function() {
+            const keypad = document.getElementById("keypad");
+            for (let char in secretAlphabet) {
+                const btn = document.createElement("button");
+                btn.className = "key";
+                btn.textContent = char;
+                btn.onclick = function() { addChar(char); };
+                keypad.appendChild(btn);
+            }
+        }
+    </script>
+</body>
+</html>
