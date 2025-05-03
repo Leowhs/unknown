@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="shortcut icon" href="../media/movie.ico" type="image/x-icon">
+  <title>minha lista</title>
+  <style>
+    :root {
+      --roxo-claro: rgb(224, 145, 255);
+    }
+
+      td a, td p {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      vertical-align: middle;
+      font-size: 15px;
+      color: white;
+      text-align: center;
+    }
+
+
+    table {
+      background-color: var(--roxo-claro);
+      border-collapse: collapse;
+      align-items: center;
+      margin: 0 auto;
+      color: rgb(255, 255, 255);
+    }
+
+    th, td {
+      border: 1px solid black;
+      padding: 10px;
+      font-size: 15px;
+      color: rgb(255, 255, 255);
+    }
+
+    .section-link {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    table a:hover{
+      color: white;
+    }
+
+    iframe{
+      width: 100%;
+      height: 500px;
+    }
+  </style>
+</head>
+<body>
+
+  <p>
+    <a href="../index.html">index</a> >
+    <a href="lista.html">lista</a>
+  </p>
+
+  <hr>
+
+  <h1>index</h1>
+  <a class="section-link" href="#filmes">filmes assistindo</a>
+  <a class="section-link" href="#series">series assistindo</a>
+  <a class="section-link" href="#lista-filmes">lista (filmes)</a>
+  <a class="section-link" href="#lista-series">lista (series)</a>
+  <a class="section-link" href="#lista-livros">lista (livros)</a>
+
+  <hr><br>
+
+  <img src="../media/movie.ico" alt="">
+  <h1>filmes & series assistindo <br> e minha lista</h1><br>
+
+  <h1 id="filmes">filmes assistindo</h1>
+
+    <table id="filmes">
+      <tr>
+        <th>FILME</th>
+        <th>TEMPO</th>
+      </tr>
+      <tr>
+        <td><a href="#">N/A</a></td>
+        <td><p> 00 : 00 </p></td>
+      </tr>
+    </table> 
+    
+    <br>
+
+    <table id="series">
+      <tr>
+        <th>SERIE</th>
+        <th>TEMPO</th>
+      </tr>
+      <tr>
+        <td><a href="https://archive.org/details/AFeiticeiraBewitchedSeason1/1.29+-+Abner+Kadabra.mkv">Bewitched</a></td>
+        <td><p> 05 : 16 </p></td>
+      </tr>
+
+      <tr>
+        <td><a href="https://fitxdeutschlandgmbh-my.sharepoint.com/personal/novelas_fitxdeutschlandgmbh_onmicrosoft_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fnovelas_fitxdeutschlandgmbh_onmicrosoft_com%2FDocuments%2FVamp%201991&ga=1">Vamp</a></td>
+        <td><p> 00 : 00 </p></td>
+      </tr>
+    </table>
+
+    <br>
+
+    <h1 id="lista-filmes">lista (filmes)</h1>
+    <table>
+      <tr>
+        <th colspan="3">FILMES</th>
+      </tr>
+      <tr>
+        <td><a href="https://play.mercadolivre.com.br/assistir/o-diabo-veste-prada/501e79ee60d043f6a0019ceeed05c01d">o diabo veste prada</a></td>
+        <td><a href="https://play.mercadolivre.com.br/assistir/cisne-negro/161284a59e0540728732624fa06759e1">cisne negro</a></td>
+        <td><a href="https://www.tokyvideo.com/video/mae-filme-dublado-terror">mãe</a></td>
+        <td><a href="https://play.mercadolivre.com.br/assistir/um-amor-a-altura/93c9ff2932054d15afc52b6ac0ce79b0">um amor a altura</a></td>
+      </tr>
+    </table>
+
+    <h1 id="lista-series">lista (series)</h1>
+    <table>
+      <tr>
+        <th colspan="4">SÉRIES</th>
+      </tr>
+      <tr>
+        <td><a href="https://pobreflix.lat/series/o-mundo-de-greg/">mundo de greg</a></td>
+        <td><a href="#raven">as visoes de raven</a></td>
+        <td><a href="https://pobreflix.lat/series/a-casa-da-raven/">a casa da raven</a></td>
+        <td><a href="https://noveflix.net/assistir-online/pega-pega/">pega-pega</a></td>
+      </tr>
+    </table> <br>
+
+
+    <iframe id="raven" src="https://playerflixapi.com/serie/4602" 
+    allowfullscreen="true"></iframe> <br><br><br><br><br>
+
+</body>
+</html>
