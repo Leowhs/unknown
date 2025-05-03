@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leitura Temporizada</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #e0c3fc, #8ec5fc);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: #333;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 2.5em;
+    }
+
+    .timer {
+      font-size: 3em;
+      background: #fff;
+      padding: 20px 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      margin-bottom: 30px;
+    }
+
+    button {
+      padding: 12px 30px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 10px;
+      background-color: #7f5af0;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #6242c8;
+    }
+  </style>
+</head>
+<body>
+  <h1>Temporizador de Leitura</h1>
+  <div class="timer" id="timer">00:00</div>
+  <button onclick="adicionarTempo()">Mudar</button>
+
+  <audio id="beep-som">
+    <source src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg" type="audio/ogg">
+    Seu navegador não suporta áudio.
+  </audio>
+
+  <script>
+    let tempoRestante = 0;
+    let intervalo;
+    const beep = document.getElementById('beep-som');
+
+    function formatarTempo(segundos) {
+      const min = String(Math.floor(segundos / 60)).padStart(2, '0');
+      const seg = String(segundos % 60).padStart(2, '0');
+      return `${min}:${seg}`;
+    }
+
+    function atualizarTimer() {
+      const timerElemento = document.getElementById('timer');
+      timerElemento.textContent = formatarTempo(tempoRestante);
+
+      if (tempoRestante > 0) {
+        tempoRestante--;
+      } else {
+        clearInterval(intervalo);
+        intervalo = null;
+        beep.play();
+      }
+    }
+
+    function adicionarTempo() {
+      tempoRestante += 90; // 1 minuto e 30 segundos
+      if (!intervalo) {
+        intervalo = setInterval(atualizarTimer, 1000);
+      }
+    }
+  </script>
+</body>
+</html>
