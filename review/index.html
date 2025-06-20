@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review</title>
+    <style>
+        body {
+            background: linear-gradient(145deg, #001a24, #004559);
+            font-family: Arial, sans-serif;
+            color: white;
+            margin: 0;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        p {
+            font-size: 15px;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: 435px;
+            max-width: 435px;
+            height: 90px;
+            margin-bottom: 10px;
+            gap: 15px;
+        }
+
+        .header img {
+            width: 70px;
+            height: 70px;
+            border-radius: 8px;
+        }
+
+        .header-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .header h1 {
+            font-size: 1.4rem;
+            margin: 0;
+        }
+
+        .header h2 {
+            font-size: 0.9rem;
+            margin: 5px 0 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            width: 435px;
+            max-width: 435px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .track-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            width: 60%;
+        }
+
+        .track {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 6px 10px;
+            border-radius: 8px;
+            color: white;
+            transition: background-color 0.3s ease;
+            font-size: 0.75rem;
+        }
+
+        /* Gradientes para cada categoria */
+        .track[data-score="SS"] { background: linear-gradient(90deg, #ff0066, #667dff); }
+        .track[data-score="S"] { background: linear-gradient(90deg, #d500f9, #ff419a); }
+        .track[data-score="A"] { background: linear-gradient(90deg, #651fff, #8b7ff8); }
+        .track[data-score="B"] { background: linear-gradient(90deg, #2196f3, #1262a3); }
+        .track[data-score="C"] { background: linear-gradient(90deg, #00c853, #effa51); }
+        .track[data-score="D"] { background: linear-gradient(90deg, #ffab00, #ffca28); }
+        .track[data-score="E"] { background: linear-gradient(90deg, #ff5722, #ff7043); }
+        .track[data-score="F"] { background: linear-gradient(90deg, #b71c1c, #f44336); }
+        .track[data-score="U"] { background: linear-gradient(90deg, #9e9e9e, #bdbdbd); }
+
+        .rank {
+            font-weight: bold;
+            padding: 3px 8px;
+            border-radius: 5px;
+            background: rgba(0, 0, 0, 0.3);
+            font-size: 0.7rem;
+        }
+
+        main {
+            width: 35%;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 5px;
+            border-radius: 8px;
+            color: white;
+            font-size: 0.7rem;
+        }
+
+        .legend {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .color-box {
+            width: 15px;
+            height: 15px;
+            border-radius: 3px;
+        }
+
+        .SS { background: linear-gradient(90deg, #ff0066, #667dff); }
+        .S { background: linear-gradient(90deg, #d500f9, #ff419a); }
+        .A { background: linear-gradient(90deg, #651fff, #8b7ff8); }
+        .B { background: linear-gradient(90deg, #2196f3, #1262a3); }
+        .C { background: linear-gradient(90deg, #00c853, #effa51); }
+        .D { background: linear-gradient(90deg, #ffab00, #ffca28); }
+        .E { background: linear-gradient(90deg, #ff5722, #ff7043); }
+        .F { background: linear-gradient(90deg, #b71c1c, #f44336); }
+        .U { background: linear-gradient(90deg, #9e9e9e, #bdbdbd); }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="capa.jpeg" alt="capa">
+        <div class="header-text">
+            <h1>Doechii</h1>
+            <h2>Girls</h2>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="track-list">
+            <div class="track" data-score="A">
+                <span>♥ Girls</span>
+                <span class="rank">9,20 ┃ A</span>
+            </div>
+        </div>
+
+        <main>
+            <h3>Legend:</h3>
+            <div class="legend">
+                <div class="legend-item"><div class="color-box SS"></div> SS: 'Eargasm' (10.0)</div>
+                <div class="legend-item"><div class="color-box S"></div> S: Extraordinário (9.75-9.99)</div>
+                <div class="legend-item"><div class="color-box A"></div> A: Transcendente (8.75-9.99)</div>
+                <div class="legend-item"><div class="color-box B"></div> B: Muito bom (7.75-8.75)</div>
+                <div class="legend-item"><div class="color-box C"></div> C: Bom (6.75-7.74)</div>
+                <div class="legend-item"><div class="color-box D"></div> D: Mediana (5.75-6.74)</div>
+                <div class="legend-item"><div class="color-box E"></div> E: Ok (4.75-5.74)</div>
+                <div class="legend-item"><div class="color-box F"></div> F: Ruim (0.75-4.74)</div>
+                <div class="legend-item"><div class="color-box U"></div> U: SOTY! (0-0.74)</div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

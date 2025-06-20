@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capa Review</title>
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #000000;
+    }
+
+    .container {
+      position: relative;
+      width: 80%;
+      max-width: 800px;
+    }
+
+    .image {
+      width: 67%;
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+      
+    }
+
+    .text-overlay {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      color: white;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    .title {
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      margin-top: 5px;
+    }
+
+    .credit {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: white;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="capa.jpeg" alt="capa" class="image" height="552px" width="436px">
+    <div class="credit">wendyvonicar<br><3</div>
+    <div class="text-overlay">
+      <div class="subtitle"> single review</div>
+      <div class="title">Girls</div>
+      <div class="subtitle">DOECHII</div>
+    </div>
+  </div>
+</body>
+</html>

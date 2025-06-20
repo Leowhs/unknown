@@ -17,24 +17,26 @@
       padding: 0;
       vertical-align: middle;
       font-size: 15px;
-      color: white;
       text-align: center;
     }
 
 
     table {
-      background-color: var(--roxo-claro);
       border-collapse: collapse;
       align-items: center;
       margin: 0 auto;
-      color: rgb(255, 255, 255);
+      background: rgb(255, 255, 255);
     }
 
     th, td {
       border: 1px solid black;
       padding: 10px;
       font-size: 15px;
-      color: rgb(255, 255, 255);
+      color: rgb(159, 79, 189);
+    }
+
+    td p {
+     color: rgb(159, 79, 189);
     }
 
     .section-link {
@@ -43,7 +45,7 @@
     }
 
     table a:hover{
-      color: white;
+     color: rgb(138, 68, 163);
     }
 
     iframe{
@@ -71,7 +73,7 @@
   <hr><br>
 
   <img src="../media/movie.ico" alt="">
-  <h1>filmes & series assistindo <br> e minha lista</h1><br>
+  <h1>filmes/series assistindo <br> e minha lista</h1><br>
 
   <h1 id="filmes">filmes assistindo</h1>
 
@@ -86,22 +88,33 @@
       </tr>
     </table> 
     
-    <br>
+
+  <h1 id="series">series assistindo</h1>
 
     <table id="series">
       <tr>
         <th>SERIE</th>
+        <th>EPISÓDIO</th>
         <th>TEMPO</th>
       </tr>
       <tr>
         <td><a href="https://archive.org/details/AFeiticeiraBewitchedSeason1/1.29+-+Abner+Kadabra.mkv">Bewitched</a></td>
+        <td><p> 29 </p></td>
         <td><p> 05 : 16 </p></td>
       </tr>
 
       <tr>
-        <td><a href="https://fitxdeutschlandgmbh-my.sharepoint.com/personal/novelas_fitxdeutschlandgmbh_onmicrosoft_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fnovelas_fitxdeutschlandgmbh_onmicrosoft_com%2FDocuments%2FVamp%201991&ga=1">Vamp</a></td>
+        <td><a href="https://canalnatelinhaonline.blogspot.com/p/teresa.html">Teresa</a></td>
+        <td><p> 1</p></td>
         <td><p> 00 : 00 </p></td>
       </tr>
+
+      <tr>
+        <td><a href="https://canalnatelinhaonline.blogspot.com/p/a-usurpadora.html">A usurpadora</a></td>
+        <td><p> 1</p></td>
+        <td><p> 00 : 00 </p></td>
+      </tr>
+
     </table>
 
     <br>
@@ -109,32 +122,49 @@
     <h1 id="lista-filmes">lista (filmes)</h1>
     <table>
       <tr>
-        <th colspan="3">FILMES</th>
+        <th colspan="8">FILMES</th>
       </tr>
       <tr>
-        <td><a href="https://play.mercadolivre.com.br/assistir/o-diabo-veste-prada/501e79ee60d043f6a0019ceeed05c01d">o diabo veste prada</a></td>
-        <td><a href="https://play.mercadolivre.com.br/assistir/cisne-negro/161284a59e0540728732624fa06759e1">cisne negro</a></td>
-        <td><a href="https://www.tokyvideo.com/video/mae-filme-dublado-terror">mãe</a></td>
-        <td><a href="https://play.mercadolivre.com.br/assistir/um-amor-a-altura/93c9ff2932054d15afc52b6ac0ce79b0">um amor a altura</a></td>
+        <td><a href="https://www.tokyvideo.com/br/video/assistir-the-ugly-stepsister-2025-filme-gratuito-legendado">stepsister</a></td>
+        <td><a href="https://www.tokyvideo.com/br/video/parasita-1982-filme-completo">parasita</a></td>
+        <td><a href="https://m.ok.ru/video/3634575247933">o reino do rei pena</a></td>
       </tr>
     </table>
 
     <h1 id="lista-series">lista (series)</h1>
     <table>
       <tr>
-        <th colspan="4">SÉRIES</th>
+        <th colspan="7">SÉRIES</th>
       </tr>
       <tr>
         <td><a href="https://pobreflix.lat/series/o-mundo-de-greg/">mundo de greg</a></td>
         <td><a href="#raven">as visoes de raven</a></td>
         <td><a href="https://pobreflix.lat/series/a-casa-da-raven/">a casa da raven</a></td>
         <td><a href="https://noveflix.net/assistir-online/pega-pega/">pega-pega</a></td>
+        <td><a href="#asoue">desventuras em série</a></td>
+        <td><a href="#gold">goldenbergs</a></td>
+        <td><a href="#friends">friends</a></td>
       </tr>
     </table> <br>
 
+    <h2 id="raven">raven</h2>
 
-    <iframe id="raven" src="https://playerflixapi.com/serie/4602" 
+    <iframe src="https://playerflixapi.com/serie/4602" 
     allowfullscreen="true"></iframe> <br><br><br><br><br>
 
+    <h2 id="asoue">asoue</h2>
+
+    <iframe src="https://playerflixapi.com/serie/65294"
+    allowfullscreen="true"></iframe> <br><br><br><br><br>
+
+    <h2 id="gold">goldenbergs</h2>
+
+    <iframe id="gold" src="https://playerflixapi.com/serie/49009" 
+    allowfullscreen="true"></iframe> <br><br><br><br><br>
+    
+    <h2 id="friends">friends</h2>
+
+    <iframe src="https://playerflixapi.com/serie/1668" 
+    allowfullscreen="true"></iframe> <br><br><br><br><br>
 </body>
 </html>
